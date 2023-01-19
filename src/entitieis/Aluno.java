@@ -42,27 +42,29 @@ public class Aluno {
 		
 		Scanner scanner = new Scanner(System.in);
 		
-		System.out.println("\n|ALUNO| \n--------------------------------------- ");
+		System.out.println("\n\n\n\n--------------------------------------- ");
+		System.out.println("OPÇÃO |ALUNO|");
+		System.out.println("---------------------------------------");
 
-		System.out.print("Digite O Id do aluno..............: ");
+		System.out.print("Digite O Id do aluno.....................: ");
 		Id(Integer.parseInt(scanner.nextLine()));
 		
-		System.out.print("Digite o Nome do aluno..............: ");
+		System.out.print("Digite o Nome do aluno...................: ");
 		Nome(scanner.nextLine());
 		
-		System.out.print("Digite a Data de Nascimento do aluno: ");
+		System.out.print("Digite a Data de Nascimento do aluno.....: ");
 		DataNascimento(scanner.nextLine());
 
-		System.out.print("Digite o RG do aluno................:");
+		System.out.print("Digite o RG do aluno.....................: ");
 		Rg(scanner.nextLine());
 		
-		System.out.print("Digite o CPF do aluno...............:");
+		System.out.print("Digite o CPF do aluno....................: ");
 		Cpf(scanner.nextLine());
 		
-		System.out.print("Digite o Telefone do aluno...............:");
+		System.out.print("Digite o Telefone do aluno...............: ");
 		Telefone(scanner.nextLine());
 		
-		System.out.print("Digite o Email do aluno..........:");
+		System.out.print("Digite o Email do aluno..................: ");
 		Email(scanner.nextLine());
 		
 		

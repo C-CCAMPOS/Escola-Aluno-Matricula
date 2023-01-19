@@ -7,6 +7,9 @@ import entitieis.Cargo;
 import entitieis.Filial;
 import entitieis.Funcionario;
 import entitieis.Livro;
+import entitieis.Modulo;
+import entitieis.Sala;
+import entitieis.Turma;
 
 public class Program {
 
@@ -14,98 +17,169 @@ public class Program {
 
 		Scanner scanner = new Scanner(System.in);
 
-		System.out.println("--------------------------------------- " + "\n            BEM VINDOª AO "
-				+ "\nSISTEMA PARA CURSOS PROFISSIONALIZANTES " + "\n---------------------------------------\n\n\n ");
+		System.out.println("---------------------------------------");
+		System.out.println("     SISTEMA DE CONTROLE ACADÊMICO     ");
+		System.out.println("             MENU PRINCIPAL            ");
+		System.out.print("---------------------------------------");
 
-		System.out.println("\n--------------------------------------- " + "\n|1| Escola \n|2| Alunos \n|3| Pedagógico"
-				+ "\n--------------------------------------- " + "\nSelecione a opção desejada:  ");
+		int opcao = 0;
 
-		Integer opcao1 = 0;
+		do {
 
-		opcao1 = Integer.parseInt(scanner.nextLine());
+			System.out.println("\nDigite uma opção válida");
+			System.out.println("---------------------------------------");
+			System.out.println("|1| Escola. \n|2| Alunos. \n|3| Pedagógico.");
+			System.out.println("--------------------------------------- ");
+			System.out.print("Selecione a opção desejada: ");
 
-		while (opcao1 > 3) {
+			opcao = Integer.parseInt(scanner.nextLine());
 
-			System.out.print(
-					"--------------------------------------- \nOpção Inválida! \n\n\n\n\n\nRepita a operação!\n--------------------------------------- \n**************  ESCOLA  *************** \n--------------------------------------- "
-							+ "\n|1| Escola \n|2| Alunos \n|3| Pedagógico\n\n---------------------------------------\nSelecione a opção desejada:  ");
-
-			opcao1 = Integer.parseInt(scanner.nextLine());
-
-			switch (opcao1) {
+			switch (opcao) {
 
 			case 1:
 
-				System.out.println(
-						"\n\n\n--------------------------------------- \n**************  ESCOLA  *************** \n--------------------------------------- \n|1| Filial \n|2| Cargo \n|3| Funcionário \n\n|0|Ecolha novamente");
+				int opcao1 = 0;
 
-				System.out
-						.print("\n\n--------------------------------------- \nDigite a opção que desejada cadastrar: ");
+				do {
 
-				Integer opcao2 = 0;
-				opcao2 = Integer.parseInt(scanner.nextLine());
-				switch (opcao2) {
+					System.out.println("\n\n\n\n--------------------------------------- ");
+					System.out.println("***********  OPÇÃO ESCOLA  *************");
+					System.out.println("-----------------------------------------");
+					System.out.println("|1| Filial \n|2| Cargo \n|3| Funcionário \n\n|0| Tela Inicial");
+					System.out.println("--------------------------------------- ");
+					System.out.print("Digite a opção desejada: ");
 
-				case 1:
-					Filial filial = new Filial();
+					opcao1 = Integer.parseInt(scanner.nextLine());
 
-					filial.CadastroFilial();
-					
-					
-				case 2:
+					System.out.print("\n\n\n\n");
 
-					Cargo cargo = new Cargo();
+					if (opcao1 == 0) {
+						Program.main(args);
 
-					cargo.CadastroCargo();
+					} else
 
-				case 3:
+						switch (opcao1) {
 
-					Funcionario funcionario = new Funcionario();
+						case 1:
 
-					funcionario.CadastroFuncionario();
+							Filial filial = new Filial();
+							filial.CadastroFilial();
 
-				}
+							System.out.println("\n\n\n\n---------------------------------------");
+							System.out.println(">>> Retornando ao Menu Principal <<<");
+							System.out.print("---------------------------------------\n\n\n\n");
+
+							Program.main(args);
+
+						case 2:
+
+							Cargo cargo = new Cargo();
+							cargo.CadastroCargo();
+
+							System.out.println("\n\n\n\n---------------------------------------");
+							System.out.println(">>> Retornando ao Menu Principal <<<");
+							System.out.print("---------------------------------------\n\n\n\n");
+
+							Program.main(args);
+
+						case 3:
+
+							Funcionario funcionario = new Funcionario();
+							funcionario.CadastroFuncionario();
+
+							System.out.println("\n\n\n\n---------------------------------------");
+							System.out.println(">>> Retornando ao Menu Principal <<<");
+							System.out.print("---------------------------------------\n\n\n\n");
+
+							Program.main(args);
+						}
+				} while (opcao1 > 3);
 
 			case 2:
 
-				System.out.println(
-						"\n\n\n--------------------------------------- \n**************  ALUNOS  *************** \n---------------------------------------");
-
 				Aluno aluno = new Aluno();
-
 				aluno.CadastroAluno();
+
+				System.out.println("\n\n\n\n---------------------------------------");
+				System.out.println(">>> Retornando ao Menu Principal <<<");
+				System.out.print("---------------------------------------\n\n\n\n");
+
+				Program.main(args);
 
 			case 3:
 
-				System.out.println(
-						"\n\n\n--------------------------------------- \n************  PEDAGÓGICO  ************* \n---------------------------------------");
+				int opcao2 = 0;
 
-				System.out.print("|1| Livro \n|2| Módulo \n|3| Salas \n|4| Horários");
+				do {
 
-				System.out
-						.print("\n\n--------------------------------------- \nDigite a opção que desejada cadastrar: ");
+					System.out.println("\n\n\n\n--------------------------------------- ");
+					System.out.println("***********  OPÇÃO PEDAGÓGICO  *************");
+					System.out.println("-----------------------------------------");
+					System.out.println("|1| Livros \n|2| Módulos \n|3| Salas \n|4| Turma \n\n|0| Tela Inicial");
+					System.out.println("--------------------------------------- ");
+					System.out.print("Digite a opção desejada: ");
 
-				Integer opcao3 = 0;
-				opcao3 = Integer.parseInt(scanner.nextLine());
+					opcao2 = Integer.parseInt(scanner.nextLine());
 
-				switch (opcao3) {
+					System.out.print("\n\n\n\n");
 
-				case 1:
+					if (opcao2 == 0) {
+						Program.main(args);
 
-					Livro livro = new Livro();
+					} else
 
-					livro.CadastroLivro();
+						switch (opcao2) {
 
-				case 2:
+						case 1:
 
-				case 3:
+							Livro livro = new Livro();
+							livro.CadastroLivro();
 
-				case 4:
+							System.out.println("\n\n\n\n---------------------------------------");
+							System.out.println(">>> Retornando ao Menu Principal <<<");
+							System.out.print("---------------------------------------\n\n\n\n");
 
-				}
+							Program.main(args);
+
+						case 2:
+
+							Modulo modulo = new Modulo();
+							modulo.CadastroModulo();
+
+							System.out.println("\n\n\n\n---------------------------------------");
+							System.out.println(">>> Retornando ao Menu Principal <<<");
+							System.out.print("---------------------------------------\n\n\n\n");
+
+							Program.main(args);
+
+						case 3:
+
+							Sala sala = new Sala();
+							sala.CadastroSala();
+
+							System.out.println("\n\n\n\n---------------------------------------");
+							System.out.println(">>> Retornando ao Menu Principal <<<");
+							System.out.print("---------------------------------------\n\n\n\n");
+
+							Program.main(args);
+
+						case 4:
+
+							Turma turma = new Turma();
+							turma.CadastroTurma();
+
+							System.out.println("\n\n\n\n---------------------------------------");
+							System.out.println(">>> Retornando ao Menu Principal <<<");
+							System.out.print("---------------------------------------\n\n\n\n");
+							
+							Program.main(args);
+							
+						}
+
+				} while (opcao2 > 4);
 
 			}
-		}
-	}
+		} while (opcao > 3);
 
+	}
 }

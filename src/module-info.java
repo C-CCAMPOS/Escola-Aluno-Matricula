@@ -6,4 +6,5 @@
  *
  */
 module SoftwareEscolar {
+	requires java.desktop;
 }

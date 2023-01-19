@@ -19,7 +19,10 @@ public class Cargo {
 
 		Scanner scanner = new Scanner(System.in);
 
-		System.out.println("\n|CARGO| \n--------------------------------------- ");
+		
+		
+		System.out.println("OPÇÃO |CARGO|");
+		System.out.println("---------------------------------------");
 		
 		System.out.print("Digite o Id do cargo.......: ");
 		Id(Integer.parseInt(scanner.nextLine()));

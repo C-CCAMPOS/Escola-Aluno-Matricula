@@ -26,7 +26,8 @@ public class Livro {
 
 		Scanner scanner = new Scanner(System.in);
 
-		System.out.println("\n|LIVRO| \n--------------------------------------- ");
+		System.out.println("OPÇÃO|LIVRO|");
+		System.out.println("---------------------------------------");
 
 		System.out.print("Digite o ID do livro: ");
 		Id(Integer.parseInt(scanner.nextLine()));

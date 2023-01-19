@@ -54,7 +54,8 @@ public class Filial {
 
 		Scanner scanner = new Scanner(System.in);
 
-		System.out.println("\n|FILIAL| \n--------------------------------------- ");
+		System.out.println("OPÇÃO |FILIAL| ");
+		System.out.println("--------------------------------------- ");
 
 		System.out.print("Digite O CNPJ da empresa........: ");
 		Cnpj(scanner.nextLine());
@@ -82,8 +83,7 @@ public class Filial {
 
 		System.out.print("Digite O Telefone da empresa....: ");
 		Telefone(scanner.nextLine());
-		
-		
+
 	}
-	
+
 }

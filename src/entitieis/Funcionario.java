@@ -57,30 +57,31 @@ public class Funcionario {
 		
 		Scanner scanner = new Scanner(System.in);
 		
-		System.out.println("\n|FUNCIONÁRIOS| \n--------------------------------------- ");
+		System.out.println("OPÇÃO |FUNCIONÁRIOS|");
+		System.out.println("---------------------------------------");
 		
-		System.out.print("Digiteo o Id do funcionário: ");
+		System.out.print("Digiteo o Id do funcionário.....: ");
 		Id(Integer.parseInt(scanner.nextLine()));
 		
-		System.out.print("Digiteo Nome do funcionário: ");
+		System.out.print("Digiteo Nome do funcionário.....: ");
 		Nome(scanner.nextLine());
 		
-		System.out.print("Digiteo o CPF do funcionário: ");
+		System.out.print("Digiteo o CPF do funcionário....: ");
 		Cpf(scanner.nextLine());
 		
-		System.out.print("Digiteo o CEP do funcionário: ");
+		System.out.print("Digiteo o CEP do funcionário....: ");
 		Cep(scanner.nextLine());
 		
-		System.out.print("Digite o Endereço - Logradouro: ");
+		System.out.print("Digite o Endereço - Logradouro..: ");
 		Logradouro(scanner.next());
 		
-		System.out.print("    Número: ");
+		System.out.print("                          Número: ");
 		Numero(scanner.next());
 		
-		System.out.print("    Cidadeo: ");
+		System.out.print("                         Cidadeo: ");
 		Cidade(scanner.next());
 		
-		System.out.print("    UF: ");
+		System.out.print("                              UF: ");
 		Estado(scanner.nextLine());
 		
 		System.out.print("Digite o Telefone do Funcionário: ");
